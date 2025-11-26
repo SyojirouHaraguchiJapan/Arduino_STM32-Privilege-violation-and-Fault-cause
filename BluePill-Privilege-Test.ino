@@ -19,7 +19,7 @@ void setup() {
     if (is_in_privileged_thread_mode()) {
         Serial.println("** Now in Previlaged mode.");
     } else {
-        Serial.println("** Now in Unrevilaged mode.");
+        Serial.println("** Now in Unprevilaged mode.");
     }
     if (is_use_which_stack_pointer()) {
         Serial.println("** Now use MSP.");
@@ -103,3 +103,4 @@ uint32_t __get_PC(void) {
 uint32_t get_pc(void) {
     return (__get_PC() & 0xFFFFFFFF);
 }
+
